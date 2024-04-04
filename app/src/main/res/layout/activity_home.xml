@@ -18,17 +18,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-<ImageView
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:src="@drawable/ir"
-    />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ir"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UTS"
                 />
-
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_language_24"
+                />
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
