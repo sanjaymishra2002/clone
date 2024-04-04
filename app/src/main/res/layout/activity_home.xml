@@ -10,7 +10,9 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@drawable/box"
+        android:padding="6dp"
+        android:elevation="8dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
   >
 
@@ -19,37 +21,89 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ir"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/irct"
                 />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+            android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UTS"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IR Unreserved Ticketing"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+
+                />
+        </LinearLayout>
+
+            <ImageView
+                android:layout_width="33dp"
+                android:layout_height="40dp"
+                android:src="@drawable/trans"
+                android:padding="4dp"
+                app:tint="@color/white" />
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="LOGIN"
+                android:gravity="center_vertical"
+                android:textSize="9dp"
+                android:textAlignment="center"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/white"
+                android:background="@drawable/roundred"
                 />
             <ImageView
-                android:layout_width="40dp"
+                android:layout_width="22dp"
                 android:layout_height="40dp"
-                android:src="@drawable/baseline_language_24"
-                />
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/dots"
+                app:tint="@color/black" />
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
 <LinearLayout
     android:id="@+id/card"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:orientation="horizontal">
+    android:layout_below="@+id/toolbar"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card"
+    android:padding="8dp"
+    android:elevation="8dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:text="INDIAN RAILWAYS OFFERS 3% BONUS ON RECHARGE OF R-WALLET"
+        />
 
 </LinearLayout>
+
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/purple_500"
         android:layout_below="@+id/card"
         app:tabTextColor="@color/orange"
-        android:layout_marginTop="50dp"
         app:tabIndicatorColor="@color/black"
         android:id="@+id/tab_layout"
         app:tabMode="fixed"
