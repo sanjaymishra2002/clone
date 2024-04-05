@@ -92,8 +92,9 @@ android:elevation="4dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textAlignment="center"
-        android:textColor="@color/purple_700"
-        android:text="INDIAN RAILWAYS OFFERS 3% BONUS ON RECHARGE OF R-WALLET"
+        android:textColor="#04006f"
+        android:textStyle="bold"
+        android:text="INDIAN RAILWAYS OFFERS 3% BONUS ON \nRECHARGE OF R-WALLET"
         />
 
 </LinearLayout>
@@ -106,7 +107,7 @@ android:elevation="4dp"
         app:tabTextColor="@color/orange"
         android:padding="5dp"
         android:elevation="8dp"
-        app:tabIndicatorColor="@color/orange"
+        app:tabIndicatorColor="@color/orange2"
         android:id="@+id/tab_layout"
         app:tabMode="fixed"
         >
@@ -116,12 +117,57 @@ android:elevation="4dp"
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:id="@+id/view_pager"
         android:background="@color/white"
+        android:layout_above="@+id/below"
         android:layout_below="@id/tab_layout"/>
 
+    <LinearLayout
+        android:id="@+id/below"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/card2"
+        android:padding="4dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="G.16.52.(15.1.31)"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/orange2"
 
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="22dp"
+         android:layout_marginEnd="12dp"
+                android:elevation="15dp"
+                android:src="@drawable/cris"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Centre for Railway Information Systems (CRIS)"
+                android:textSize="12sp"
+                android:textColor="@color/orange2"
+
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </RelativeLayout>
