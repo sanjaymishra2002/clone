@@ -20,6 +20,10 @@ public class MyViewPagerAdapter  extends FragmentStateAdapter {
                 return new NotificationFragment();
             case 2:
                 return new SettingsFragment();
+            case 3:
+                return new PlatformFragment();
+            case 4:
+                return new SeasonFragment();
             default:
                 return new HomeFragment();
         }
@@ -27,6 +31,6 @@ public class MyViewPagerAdapter  extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 3;
+        return 5;
     }
 }

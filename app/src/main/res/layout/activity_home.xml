@@ -84,8 +84,8 @@
     android:layout_below="@+id/toolbar"
     android:layout_height="wrap_content"
     android:background="@drawable/card"
-    android:padding="8dp"
-    android:elevation="8dp"
+    android:padding="12dp"
+android:elevation="4dp"
     android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
@@ -104,7 +104,9 @@
         android:backgroundTint="@color/purple_500"
         android:layout_below="@+id/card"
         app:tabTextColor="@color/orange"
-        app:tabIndicatorColor="@color/black"
+        android:padding="5dp"
+        android:elevation="8dp"
+        app:tabIndicatorColor="@color/orange"
         android:id="@+id/tab_layout"
         app:tabMode="fixed"
         >
@@ -117,7 +119,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/view_pager"
-        android:background="@color/teal_200"
+        android:background="@color/white"
         android:layout_below="@id/tab_layout"/>
 
 

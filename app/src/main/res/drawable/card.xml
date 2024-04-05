@@ -2,12 +2,12 @@
     <!-- Shadow -->
     <item>
         <shape>
-            <solid android:color="#808080" /> <!-- Shadow color -->
-            <corners android:radius="8dp" /> <!-- Adjust the radius as per your requirement -->
+            <solid android:color="@color/grey" /> <!-- Shadow color -->
+            <corners android:radius="0dp" /> <!-- Adjust the radius as per your requirement -->
         </shape>
     </item>
     <!-- Actual Shape -->
-    <item android:top="1dp" android:bottom="1dp"> <!-- Adjust shadow offset as needed -->
+    <item android:top="0dp" android:bottom="0dp"> <!-- Adjust shadow offset as needed -->
         <shape>
             <solid android:color="@color/white" />
           />

@@ -1,15 +1,290 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".HomeFragment">
 
+
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:padding="1dp"
+        android:orientation="horizontal"
+        android:alignmentMode="alignMargins"
+        android:background="#efefef"
+        android:useDefaultMargins="true">
+
+        <!-- CardView 1 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center_vertical"
+            android:elevation="10dp"
+
+            >
+<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+    android:gravity="center_horizontal"
+
+        >
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+
+        android:src="@drawable/icon1"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home Fragment"
-        android:layout_centerInParent="true"
-        android:textSize="32dp"/>
+        android:text="CANCEL TICKET"
+        android:textColor="@color/orange"
+        android:padding="1dp"
+        android:textSize="13dp"
+        />
+</LinearLayout>            <!-- Your card content -->
 
-</RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 2 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:elevation="10dp"
+>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_train_24"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BOOKING HISTORY"
+                    android:textColor="@color/orange"
+                    android:padding="1dp"
+                    android:textSize="13dp"
+                    />
+            </LinearLayout>
+            <!-- Your card content -->
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 3 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_gravity="fill"
+            android:elevation="10dp"
+          >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+
+                >
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+
+                    android:src="@drawable/icon3"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SHOW TICKET"
+                    android:padding="1dp"
+                    android:textSize="13dp"
+                    android:textColor="@color/orange"
+                    />
+            </LinearLayout>
+            <!-- Your card content -->
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:elevation="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+
+                    android:src="@drawable/icon4"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R-WALLET"
+                    android:textColor="@color/orange"
+                    android:padding="1dp"
+                    android:textSize="13dp"
+                    />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+           android:elevation="10dp"
+       >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+
+                >
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+
+                    android:src="@drawable/baseline_account_circle_24"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PROFILE"
+                    android:textColor="@color/orange"
+                    android:padding="1dp"
+                    android:textSize="13dp"
+                    />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_gravity="fill"
+            android:elevation="10dp"
+
+      >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+
+                    android:src="@drawable/icon6"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TRANSACTION"
+                    android:textColor="@color/orange"
+                    android:padding="1dp"
+                    android:textSize="13dp"
+                    />
+            </LinearLayout>
+            <!-- Your card content -->
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Repeat similar CardViews for remaining rows and columns -->
+
+    </GridLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box"
+        android:padding="7dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:text="NORMAL BOOKING"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:checked="true"
+                android:text="Book and Travel (Paperless)"
+                android:textSize="10dp"
+                android:buttonTint="@color/orange"
+                />
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+              android:layout_marginStart="19dp"
+                android:padding="8dp"
+                android:text="Book and Print (Paper)"
+                android:textSize="10dp"
+                android:buttonTint="@color/orange"
+                />
+        </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

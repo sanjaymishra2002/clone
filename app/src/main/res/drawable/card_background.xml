@@ -1,0 +1,10 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="8dp" /> <!-- Adjust corner radius as needed -->
+    <solid android:color="@color/white" /> <!-- Background color -->
+    <padding
+        android:left="4dp"
+        android:top="4dp"
+        android:right="4dp"
+        android:bottom="4dp" /> <!-- Padding to create space for the shadow -->
+    <size android:height="48dp"/> <!-- Height of the CardView -->
+</shape>
