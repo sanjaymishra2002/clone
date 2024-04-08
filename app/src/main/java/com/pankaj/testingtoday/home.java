@@ -57,15 +57,15 @@ public class home extends AppCompatActivity {
 
         // Set text and icon for each tab
         tabText1.setText("Journey Ticket");
-        tabIcon1.setImageResource(R.drawable.baseline_train_24);
+        tabIcon1.setImageResource(R.drawable.t1);
         tabText2.setText("QR Ticket");
-        tabIcon2.setImageResource(R.drawable.baseline_train_24);
+        tabIcon2.setImageResource(R.drawable.t2);
         tabText3.setText("Quick Ticket");
-        tabIcon3.setImageResource(R.drawable.baseline_train_24);
+        tabIcon3.setImageResource(R.drawable.t3);
         tabText4.setText("Platform Ticket");
         tabIcon4.setImageResource(R.drawable.baseline_train_24);
         tabText5.setText("Season Ticket");
-        tabIcon5.setImageResource(R.drawable.baseline_train_24);
+        tabIcon5.setImageResource(R.drawable.t5);
 
         myViewPagerAdapter = new MyViewPagerAdapter(this);
         viewPager2.setAdapter(myViewPagerAdapter);
