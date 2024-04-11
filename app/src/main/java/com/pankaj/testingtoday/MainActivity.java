@@ -17,12 +17,57 @@ import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView dateTextView = findViewById(R.id.bookingdate);
+        TextView dateTextView2 = findViewById(R.id.bookingdate2);
+        TextView fromdate = findViewById(R.id.fromdate);
+        TextView todate = findViewById(R.id.todate);
+
+// Get today's date
+        Calendar calendar = Calendar.getInstance();
+        Date today = calendar.getTime();
+
+// Subtract 10 days from today's date
+        Calendar tenDaysAgoCalendar = Calendar.getInstance();
+        tenDaysAgoCalendar.setTime(today);
+        tenDaysAgoCalendar.add(Calendar.DAY_OF_YEAR, -11);
+        Date tenDaysAgo = tenDaysAgoCalendar.getTime();
+
+// Subtract 9 days from today's date
+        Calendar nineDaysAgoCalendar = Calendar.getInstance();
+        nineDaysAgoCalendar.setTime(today);
+        nineDaysAgoCalendar.add(Calendar.DAY_OF_YEAR, -10);
+        Date nineDaysAgo = nineDaysAgoCalendar.getTime();
+
+// Add 20 days to today's date
+        Calendar twentyDaysLaterCalendar = Calendar.getInstance();
+        twentyDaysLaterCalendar.setTime(today);
+        twentyDaysLaterCalendar.add(Calendar.DAY_OF_YEAR, 20);
+        Date twentyDaysLater = twentyDaysLaterCalendar.getTime();
+
+// Format the date
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        String formattedDate = dateFormat.format(tenDaysAgo);
+        String formattedDate2 = dateFormat.format(nineDaysAgo);
+        String formattedDate3 = dateFormat.format(twentyDaysLater);
+
+// Set the formatted date to the TextView
+        dateTextView.setText(formattedDate);
+        fromdate.setText(formattedDate2);
+        todate.setText(formattedDate3);
+        dateTextView2.setText("Booking Time: " + formattedDate + " 07:07");
+
 
         TextView movingText = findViewById(R.id.txtTitle);
 
