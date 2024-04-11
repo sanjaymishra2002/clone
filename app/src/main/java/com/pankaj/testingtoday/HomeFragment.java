@@ -35,7 +35,7 @@ public class HomeFragment extends Fragment {
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =  new Intent(requireActivity(), tickets.class);
+                Intent intent =  new Intent(requireActivity(), login.class);
                 startActivity(intent);
             }
         });
