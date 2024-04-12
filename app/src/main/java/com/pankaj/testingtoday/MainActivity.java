@@ -1,15 +1,20 @@
 package com.pankaj.testingtoday;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.ValueAnimator;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
@@ -24,15 +29,60 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Handler handler;
+    TextView btn1, btn2, btn3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 
         TextView dateTextView = findViewById(R.id.bookingdate);
         TextView dateTextView2 = findViewById(R.id.bookingdate2);
         TextView fromdate = findViewById(R.id.fromdate);
         TextView todate = findViewById(R.id.todate);
+
+         btn1 = findViewById(R.id.btn1);
+         btn2 = findViewById(R.id.btn2);
+         btn3 = findViewById(R.id.btn3);
+        handler = new Handler(Looper.getMainLooper());
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Wait for 5 seconds before showing the prompt
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        showAppNotRespondingDialog();
+                    }
+                }, 2000); // 5000 milliseconds = 5 seconds
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Wait for 5 seconds before showing the prompt
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        showAppNotRespondingDialog();
+                    }
+                }, 2000); // 5000 milliseconds = 5 seconds
+            }
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Wait for 5 seconds before showing the prompt
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        showAppNotRespondingDialog();
+                    }
+                }, 2000); // 5000 milliseconds = 5 seconds
+            }
+        });
 
 // Get today's date
         Calendar calendar = Calendar.getInstance();
@@ -118,5 +168,24 @@ public class MainActivity extends AppCompatActivity {
 
         // Set spannable string to the text view
         textView.setText(spannableString);
+    }
+    private void showAppNotRespondingDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("UTS isn't responding.")
+                .setCancelable(false)
+                .setPositiveButton("Close App", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Close the app
+                        finishAffinity(); // This closes all activities of the app
+                    }
+                })
+                .setNegativeButton("Wait", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Dismiss the dialog and allow the user to continue using the app
+                        dialog.dismiss();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }

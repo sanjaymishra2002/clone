@@ -733,6 +733,7 @@ android:layout_gravity="end|center_vertical"
             android:text="FOR MEDICAL EMPERGENCY | FIRST AID\n CONTACT TICKET CHECKING STAFF | GUARD OR \n DIAL 139"
             />
         <TextView
+            android:id="@+id/btn1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="OPEN QR CODE"
@@ -747,6 +748,7 @@ android:layout_gravity="end|center_vertical"
             android:background="@drawable/draw"
             />
         <TextView
+            android:id="@+id/btn2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="NEXT TRAIN KANDIVLI"
@@ -761,6 +763,7 @@ android:layout_gravity="end|center_vertical"
             android:background="@drawable/draw"
             />
         <TextView
+            android:id="@+id/btn3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ok"
