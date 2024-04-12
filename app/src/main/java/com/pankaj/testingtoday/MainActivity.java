@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 // Add 20 days to today's date
         Calendar twentyDaysLaterCalendar = Calendar.getInstance();
         twentyDaysLaterCalendar.setTime(today);
-        twentyDaysLaterCalendar.add(Calendar.DAY_OF_YEAR, 20);
+        twentyDaysLaterCalendar.add(Calendar.DAY_OF_YEAR, 19);
         Date twentyDaysLater = twentyDaysLaterCalendar.getTime();
 
 // Format the date

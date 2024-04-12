@@ -402,6 +402,7 @@
                                 android:textColor="@color/black"
                                 />
                             <TextView
+                                android:id="@+id/bookingdate"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="12/03/2024 21:07"
